@@ -28,4 +28,3 @@ gpgconf --launch gpg-agent
 gpg-bye > /dev/null 2>&1
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
