@@ -1,0 +1,12 @@
+[alias]
+  amend = "!git commit -a --amend"
+  undo = "!git reset --soft HEAD~1"
+[diff]
+  noprefix = true
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = $HOME/.gitignore_global
+	editor = vim
+[submodule]
+	recurse = true
