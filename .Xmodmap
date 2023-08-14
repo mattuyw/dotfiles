@@ -1,3 +1,4 @@
+! NOTE: requires xorg-xmodmap
 remove Lock = Caps_Lock
 keysym Caps_Lock = Escape
 add Lock = Caps_Lock
