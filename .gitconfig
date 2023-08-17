@@ -10,3 +10,6 @@
 	editor = vim
 [submodule]
 	recurse = true
+[user]
+	email = matthew.paul.nichols@gmail.com
+	name = Matthew Nichols
