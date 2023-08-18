@@ -1,7 +1,14 @@
 #
 # ~/.bashrc
 #
-
+if [ -n "$ZSH_VERSION" ]; then
+    shell=zsh
+elif [ -n "$BASH_VERSION" ]; then
+    shell=bash
+else
+   echo "Unsupported shell. Exiting script."
+   return
+fi
 
 # [ -f "$HOME/.config/.gc" ] && source "$HOME/.config/.gc" 2> /dev/null
 
@@ -25,6 +32,8 @@ export EDITOR='vim'
 [[ -f ~/.bash_profile ]] && . ~/.bash_profile
 
 command -v thefuck > /dev/null 2>&1 && eval $(thefuck --alias)
+
+command -v starship > /dev/null 2>&1 && source <(starship init $shell --print-full-init)
 
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return

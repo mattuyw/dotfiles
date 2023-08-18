@@ -11,7 +11,7 @@ export PATH="$PATH:$HOME/.local/share/pipx/bin"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/.local/pipx/venvs:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/share:$PATH"
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/.ripgreprc"
 export TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins/"
