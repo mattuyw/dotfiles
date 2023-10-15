@@ -9,7 +9,6 @@ alias cat='bat --paging=never'
 # export PATH="$PATH:$HOME/.local/pipx/bin"
 export PATH="$PATH:$HOME/.local/share/pipx/bin"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="$HOME/.local/pipx/venvs:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/share:$PATH"
 
