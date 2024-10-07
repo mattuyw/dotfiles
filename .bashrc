@@ -6,17 +6,18 @@ if [ -n "$ZSH_VERSION" ]; then
 elif [ -n "$BASH_VERSION" ]; then
     shell=bash
 else
-   echo "Unsupported shell. Exiting script."
+   echo "Unsupported shell. Exiting."
    return
 fi
 
 # [ -f "$HOME/.config/.gc" ] && source "$HOME/.config/.gc" 2> /dev/null
 
+export GPG_TTY=$(tty)
 alias gpg-bye='gpg-connect-agent updatestartuptty /bye'
 
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-gpg-bye > /dev/null 2>&1
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# gpgconf --launch gpg-agent
+# gpg-bye > /dev/null 2>&1
 
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm
