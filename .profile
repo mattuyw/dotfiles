@@ -1,0 +1,5 @@
+export PATH="$PATH:$HOME/.pipx/bin"
+export PATH="$PATH:/Users/mattuyw/.local/bin"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/share:$PATH"

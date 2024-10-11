@@ -28,9 +28,19 @@ export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
-export EDITOR='vim'
 
-[[ -f ~/.bash_profile ]] && . ~/.bash_profile
+# Create alias override commands using 'lsd'
+if command -v lsd > /dev/null 2>&1; then
+  alias ls='lsd --group-directories-first'
+  alias ll='lsd -l --group-directories-first'
+  alias la='lsd -la --group-directories-first'
+  alias tree='lsd -l --group-directories-first --tree --depth=2'
+fi
+
+command -v nvim > /dev/null 2>&1 && alias vim='nvim'
+command -v bat > /dev/null 2>&1 && alias cat='bat --paging=never'
+
+export EDITOR='vim'
 
 command -v thefuck > /dev/null 2>&1 && eval $(thefuck --alias)
 
