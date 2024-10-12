@@ -87,7 +87,11 @@ mods = "Command"
 history = 100000
 
 [shell]
-args = ["--login", "-c", "tmux attach-session -t $USER || tmux new-session -s $USER"]
+args = [
+  "--login",
+  "-c",
+  "tmux attach-session -t $USER || tmux new-session -s $USER",
+]
 program = "/bin/sh"
 
 [window]
