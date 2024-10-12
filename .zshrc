@@ -1,7 +1,3 @@
-#if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
-# tmux attach-session -t $USER || tmux new-session -s $USER
-#fi
-
 autoload -Uz compinit; compinit -C
 
 # plugin manager
@@ -12,6 +8,7 @@ if [ -f "$HOME/.local/share/zap/zap.zsh" ]; then
   plug "zsh-users/zsh-completions"
   plug "aloxaf/fzf-tab"
   plug "freed-wu/fzf-tab-source"
+  plug "jeffreytse/zsh-vi-mode"
 fi
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[ -f ~/.bashrc ] && . ~/.bashrc
