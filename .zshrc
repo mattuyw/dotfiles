@@ -1,5 +1,8 @@
 autoload -Uz compinit; compinit -C
 
+# Append a command directly
+zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && . ~/.fzf.zsh')
+
 # plugin manager
 if [ -f "$HOME/.local/share/zap/zap.zsh" ]; then
   source "$HOME/.local/share/zap/zap.zsh"

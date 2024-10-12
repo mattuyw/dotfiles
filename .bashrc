@@ -46,14 +46,6 @@ command -v thefuck > /dev/null 2>&1 && eval $(thefuck --alias)
 
 command -v starship > /dev/null 2>&1 && source <(starship init $shell --print-full-init)
 
-# Setup fzf
-# ---------
-if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
-fi
-
-command -v fzf > /dev/null 2>&1 && eval "$(fzf --$shell)"
-
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return
 #
