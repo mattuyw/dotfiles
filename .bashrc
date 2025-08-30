@@ -19,8 +19,9 @@ alias gpg-bye='gpg-connect-agent updatestartuptty /bye'
 # gpgconf --launch gpg-agent
 # gpg-bye > /dev/null 2>&1
 
-export NVM_DIR=$HOME/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PIP_REQUIRE_VIRTUALENV=true
 
@@ -46,6 +47,7 @@ command -v thefuck > /dev/null 2>&1 && eval $(thefuck --alias)
 
 command -v starship > /dev/null 2>&1 && source <(starship init $shell --print-full-init)
 
+export TF_BINARY_PATH="$HOME/.local/bin/terraform"
 # If not running interactively, don't do anything
 # [[ $- != *i* ]] && return
 #
