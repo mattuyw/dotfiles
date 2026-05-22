@@ -13,3 +13,8 @@
 [user]
 	email = matthew.paul.nichols@gmail.com
 	name = Matthew Nichols
+	signingkey = 0C02F8856B172E0F
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
